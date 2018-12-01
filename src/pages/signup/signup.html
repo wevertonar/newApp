@@ -1,0 +1,66 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-title>Nova Conta</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+  
+  <ion-card>
+  
+    <ion-card-header class="login">
+        <ion-grid >
+            <ion-row>
+              <ion-col center text-center>
+                <ion-icon style="zoom:8;" name="ios-contact-outline"></ion-icon>
+              </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card-header>
+  
+    <ion-card-content>
+
+      <ion-item>
+        <ion-label floating>Nome Completo</ion-label>
+        <ion-input type="text" [(ngModel)]="user.nomeDenunciante"></ion-input>
+      </ion-item>
+
+
+        <ion-item>
+          <ion-label floating>Rua</ion-label>
+          <ion-input type="text" [(ngModel)]="user.ruaDenunciante"></ion-input>
+        </ion-item>
+
+   
+          <ion-item>
+            <ion-label floating>Bairro</ion-label>
+            <ion-input type="text" [(ngModel)]="user.bairroDenunciante"></ion-input>
+          </ion-item>
+
+            <ion-item>
+              <ion-label floating>Numero casa</ion-label>
+              <ion-input type="tel" [(ngModel)]="user.numeroCasaDenunciante"></ion-input>
+            </ion-item>
+
+              <ion-item>
+                <ion-label floating>Telefone</ion-label>
+                <ion-input type="tel" [(ngModel)]="user.telefoneDenunciante"></ion-input>
+              </ion-item>
+
+      <ion-item>
+        <ion-label floating>E-mail</ion-label>
+        <ion-input type="email" [(ngModel)]="user.email" ></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label floating>Senha</ion-label>
+        <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+      </ion-item>
+  
+      <button ion-button block color="secondary" (click)="signup(user)">Cadastro</button>
+    
+    </ion-card-content>
+  
+  </ion-card>
+  
+  </ion-content>

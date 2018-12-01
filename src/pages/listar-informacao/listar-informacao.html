@@ -1,0 +1,26 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Listar Informacao</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-card *ngFor="let informacao | async">
+
+    <img [src]="denuncia.fotoDenuncia"/>
+
+  <ion-card-content>
+    <ion-card-title>
+      <ion-icon name="md-arrow-dropright" item-start ></ion-icon><a>Tipo:</a> {{ denuncia.tipoDenuncia }}    <ion-icon name="md-arrow-dropright" item-start ></ion-icon><a>Situação:</a> {{ denuncia.status}}
+      </ion-card-title>
+    <p>
+      <ion-icon name="md-calendar" item-start ></ion-icon><a>DATA ENVIO:</a> {{ denuncia.dataEnvio }}
+    </p>
+  </ion-card-content>
+</ion-card>
+</ion-content>

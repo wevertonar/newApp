@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    
+    <ion-title>Home</ion-title>
+    
+    <ion-buttons end>
+      <button ion-button icon-only (click)="adicionar()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+      <button ion-button icon-only (click)="sair()">
+        <ion-icon name="ios-log-out-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+    <div #map id="map"></div>
+<ion-card *ngFor="let appUser of appUsers | async">
+<ion-card-title> </ion-card-title>
+
+<ion-item>
+<h1> BEM-VINDO</h1>
+</ion-item>
+  <ion-item>
+    <ion-icon name="ios-contact" item-start large></ion-icon>
+    <h2>{{ appUser.nomeDenunciante }}</h2>
+    <p></p>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name="md-mail" item-start large ></ion-icon>
+    <h2>{{ appUser.email }}</h2>
+    <p></p>
+  </ion-item>
+
+
+</ion-card>
+</ion-content>
